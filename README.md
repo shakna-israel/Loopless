@@ -35,6 +35,26 @@ For how numbers map to characters, see [alphabet.csv](alphabet.csv).
 
 Note: There should be exactly 999 cells available.
 
+---
+
+## Reference Implementation
+
+A simple reference implementation that will run on a normal desktop computer is provided. It should be portable C, and run on most things. You can find it in [loopless.c](loopless.c).
+
+It expects a file containing a Loopless program to be given as the first argument.
+
+```
+./loopless HelloWorld.lop
+```
+
+### Compiling
+
+```
+cc loopless.c -o loopless
+```
+
+Nothing special to be done.
+
 --- 
 
 ## LICENSE
