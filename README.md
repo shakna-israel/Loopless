@@ -11,7 +11,7 @@ For more, see [HelloWorld.lop](HelloWorld.lop), where Loopless is presented in a
 ## Hello, World!
 
 ```Loopless
-++++++++.---.+++++++..+++.>.<++++++++.--------.+++.------.--------.
+@#++++++++.---.+++++++..+++.>.<++++++++.--------.+++.------.--------.
 ```
 
 ```
@@ -24,6 +24,8 @@ For how numbers map to characters, see [alphabet.csv](alphabet.csv).
 
 ## Operators
 
+* ```@``` Clear all cells back to an initial value of 0.
+* ```#``` Clear the output device.
 * ```+``` Increment current cell. If cell value is 255, doesn't increment.
 * ```-``` Decrement current cell. If cell value is 0, doesn't decrement.
 * ```<``` Select previous cell. If first cell, doesn't change cell.
