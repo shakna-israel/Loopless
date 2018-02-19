@@ -1,0 +1,53 @@
+Loopless
+
+This document is a valid Loopless program, so some of the grammar might appear odd;
+
+Loopless isn't Turing Complete; Rather, it's a completely braindead specification that isn't much more complex than a String;
+
+I've used it in several embedded projects now, where I have a little memory to spare, and need to frequently update Strings, and the client wants to obfuscate things a bit;
+
+You can think of it as a reduced Brainfuck:
+
+* Instead of 30000 cells, it has 999
+* There is no input command
+* There is no looping construct
+
+So, let's launch into some more visible code:
+
+'@' clears the tape, resetting all cells in the tape to 0;
+
+'#' clears the output, usually a display or terminal of some kind;
+
+Now we've done that, to ensure a previous program isn't going to play havoc with us, we can begin printing our HELLO WORLD; Note that Loopless has a very reduced alphabet that it can access;
+
+We use the '+' operator as an incrementor; A few more, +++++++, and we have an H, or the number 8 in our cell. We just printed it too, by using the dot operator, that full stop back there;
+
+We then use the '-' operator as our decrementor, and go backwards to get an E, --.
+
+Next, we go forward to get an 'L': +++++++. We've displayed it, but we need two, so let's do that again.
+
+Three increments later, +++, we have an O, which we'll display in the next sentence;
+
+Loopless is also designed to hide itself well in documents, like this one, but that kind of obfuscation isn't entirely necessary, just fun.
+
+Now, as 0 and space are the same thing, we can just drop by the next cell to display a space: >.
+
+We can return with just a little arrow: <
+
+Unlike BF's undefined behaviour in reaching bounds, like the maximum or minimum number of cells, Loopless just refuses to go out of bounds; Another arrow, <, has no effect;
+
+++++++++. There, we have a W in the output;
+
+-------- Gives us an O.
+
++++ Gives us an R.
+
+------ Gives us an L.
+
+-------- Gives us a D.
+
+Unfortunately I can't show the full alphabet mapping in this document, because I'm not entirely sure how to make that still a valid Loopless document, but you can see it in the alphabet csv file;
+
+But, run this file through a Loopless interpreter, and you'll get an output of: HELLO WORLD
+
+You can, of course, add symbols too, but I've left them out to make it easier to write this document, as things like an exclaimation mark are valid Loopless operators;
